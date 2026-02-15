@@ -68,6 +68,7 @@ class ApiService {
         data: data,
         options: Options(extra: {'requiresAuth': requiresAuth}),
       );
+      return response.data;
     } on DioException catch (e) {
       _handleError(e);
     }
@@ -85,6 +86,7 @@ class ApiService {
         data: data,
         options: Options(extra: {'requiresAuth': requiresAuth}),
       );
+      return response.data;
     } on DioException catch (e) {
       _handleError(e);
     }
@@ -111,5 +113,6 @@ class ApiService {
     } else {
       errorMessage = 'Network error: ${e.message}';
     }
+    throw Exception(errorMessage);
   }
 }
