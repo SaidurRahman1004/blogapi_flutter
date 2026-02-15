@@ -4,7 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
-  final ApiService _apiService = ApiService();
+  final ApiService _apiService;
+
+  AuthService(this._apiService);
 
   //rigester
   Future<Map<String, dynamic>> register({
