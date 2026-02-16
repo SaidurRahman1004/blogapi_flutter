@@ -1,4 +1,4 @@
-import 'package:blogapi_flutter/screens/auth/login_screen.dart';`12
+import 'package:blogapi_flutter/screens/auth/auth_wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-      home: LoginScreen(),
+      home: const AuthWrapper(),
     );
   }
 }
