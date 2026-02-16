@@ -1,3 +1,4 @@
+import 'package:blogapi_flutter/screens/auth/login_screen.dart';`12
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -19,10 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-      home: Scaffold(
-        appBar: AppBar(title: const Text("Blog App")),
-        body: const Center(child: Text("Welcome to Riverpod!")),
-      ),
+      home: LoginScreen(),
     );
   }
 }

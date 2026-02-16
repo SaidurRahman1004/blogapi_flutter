@@ -60,8 +60,9 @@ class PostActions extends _$PostActions {
   }
   //Delete
   Future<void> deletePost(int id) async {
-    final apiService = ref.read(apiServiceProvider).delete('/posts/$id/');
+    await ref.read(apiServiceProvider).delete('/posts/$id/');
     ref.invalidate(fetchPostsProvider);
+
   }
 
 }
